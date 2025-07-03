@@ -6,9 +6,9 @@ After=network.target
 Type=simple
 
 # → Wenn du feste Umgebungsvariablen brauchst, hier setzen
-# Environment="PORT=8088" "TARGET=http://DOMOTICZ-IP"  
+# Environment="PORT=8089" "TARGET=http://DOMOTICZ-IP:PORT"  
 
-ExecStart=/usr/bin/env PORT=8088 TARGET=http://DOMOTICZ-IP /usr/bin/node /opt/domapi/j.js
+ExecStart=/usr/bin/env PORT=8089 TARGET=http://DOMOTICZ-IP:PORT /usr/bin/node /opt/domapi/j.js
 
 # Neustart bei jeder Exit-Code != 0
 Restart=on-failure

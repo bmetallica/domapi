@@ -1,0 +1,26 @@
+[Unit]
+Description=Domoticz JSON‑Compat Proxy
+After=network.target
+
+[Service]
+Type=simple
+
+# → Wenn du feste Umgebungsvariablen brauchst, hier setzen
+# Environment="PORT=8088" "TARGET=http://DOMOTICZ-IP"  
+
+ExecStart=/usr/bin/env PORT=8088 TARGET=http://DOMOTICZ-IP /usr/bin/node /opt/domapi/j.js
+
+# Neustart bei jeder Exit-Code != 0
+Restart=on-failure
+RestartSec=5s
+
+# Alle Logs verwerfen
+StandardOutput=null
+StandardError=null
+
+# (optional) Service als nicht‑root laufen lassen
+# User=domapi
+# WorkingDirectory=/opt/domapi
+
+[Install]
+WantedBy=multi-user.target

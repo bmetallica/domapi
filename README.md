@@ -1,3 +1,5 @@
+🇩🇪 Sprachauswahl: [Deutsch](README.md) | [English](README_en.md) | [Français](README_fr.md)
+
 # 🧭 Domoticz JSON Compatibility Proxy
 
 Ein schlanker Reverse-Proxy für [Domoticz](https://www.domoticz.com/), der alte JSON-API-Aufrufe automatisch in die neue API-Syntax übersetzt.

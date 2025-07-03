@@ -62,7 +62,7 @@ git clone https://github.com/bmetallica/domapi.git
 cd domapi
 npm init -y
 npm i express http-proxy-middleware morgan 
-nano service/domapi.service !!!-Hier die DOMOTICZ-IP anpassen-!!!
+nano service/domapi.service !!!-Hier die DOMOTICZ-IP und den PORT anpassen-!!!
 cp service/domapi.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now domapi.service
@@ -70,4 +70,4 @@ sudo systemctl enable --now domapi.service
 
 
 ### Funktion
-Nach dem starten der NodeJs Anwendung hört der Proxy auf Port 8088 und übersetzt alle dort ankommenden Anfragen.
+Nach dem starten der NodeJs Anwendung hört der Proxy auf Port 8089 und übersetzt alle dort ankommenden Anfragen.

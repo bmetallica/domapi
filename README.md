@@ -58,7 +58,7 @@ Domoticz hat viele alte API-Endpunkte wie `?type=devices` oder `?type=users` in 
 
 ```
 cd /opt/ 
-git clone 
+git clone https://github.com/bmetallica/domapi.git
 cd domapi
 npm init -y
 npm i express http-proxy-middleware morgan 
